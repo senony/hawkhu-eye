@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 String userString = response.body().string();
                 JSONArray BirdArray = new JSONArray(userString);
                 for(int i = 0; i < BirdArray.length(); i++) {
-                    if(BirdArray.getJSONObject(i).get("title").toString().equals("bird")) {
+                    if(BirdArray.getJSONObject(i).get("text").toString().equals("bird")) {
                         arr.add(BirdArray.getJSONObject(i).get("image").toString());
                         dates.add(BirdArray.getJSONObject(i).get("published_date").toString());
                     }
